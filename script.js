@@ -3,22 +3,19 @@ const dateCategorii = [
     {
         titlu: "Steroizi Anabolici",
         desc: "Compuși androgenici pentru studii metabolice și dezvoltare musculară",
-        simbol: "💊"
     },
     {
         titlu: "SARMS",
         desc: "Modulatori selectivi ai receptorilor androgenici pentru cercetări țintite",
-        simbol: "🔬"
     },
     {
         titlu: "Peptide",
         desc: "Secvențe de aminoacizi pentru studii despre semnalizare celulară",
-        simbol: "🧬"
+     
     },
     {
         titlu: "Hormoni de Creștere",
         desc: "Proteine recombinante pentru cercetări avansate despre metabolismul uman",
-        simbol: "📊"
     }
 ];
 function creazaCarduriCategorii() {
@@ -31,15 +28,12 @@ function creazaCarduriCategorii() {
         const cat = dateCategorii[i];
         const card_nou = document.createElement('div');
         card_nou.className = 'category-card';
-        const iconDiv = '<div style="font-size: 3rem; margin-bottom: 1rem;">' + cat.simbol + '</div>';
         const titluH3 = '<h3>' + cat.titlu + '</h3>';
         const descP = '<p>' + cat.desc + '</p>';
-        
-        card_nou.innerHTML = iconDiv + titluH3 + descP;
+        card_nou.innerHTML = titluH3 + descP;
         div_categorii.appendChild(card_nou);
     }
 }
-
 function calculeazaPretCuReducere(cant, pret_unitar) {
     let reducere_aplicata = 0;
     let procent_red = 0;
@@ -72,6 +66,7 @@ function genereazaCalculatorComanda() {
     if (!container_calc) {
         return;
     }
+    
     let html_calculator = '<div class="calculator-box">';
     html_calculator += '<div class="calc-input-group">';
     html_calculator += '<label for="product-select">Selectează Produsul:</label>';
@@ -169,8 +164,10 @@ function construiesteTabelPreturi() {
         td4.className = 'price-highlight';
         td4.textContent = item.pret + ' EUR';
         rand.appendChild(td4);
+        
         tbody.appendChild(rand);
     }
+    
     tabel.appendChild(tbody);
     loc_tabel.appendChild(tabel);
 }
@@ -212,12 +209,13 @@ const pachete = [
         ]
     }
 ];
-
 function afiseazaPachete() {
     const zona_pachete = document.getElementById('research-packages');
+    
     if (!zona_pachete) {
         return;
     }
+    
     const grid = document.createElement('div');
     grid.className = 'packages-grid';
     for (let m = 0; m < pachete.length; m++) {
@@ -256,6 +254,7 @@ function configurareCalculatorBulk() {
     if (!buton) {
         return;
     }
+    
     buton.addEventListener('click', function() {
         const cant_input = document.getElementById('bulk-quantity');
         const pret_input = document.getElementById('bulk-price');
@@ -326,16 +325,21 @@ function creeazaFormular() {
     html_form += '</div>';
     html_form += '<button type="button" id="submit-contact" class="submit-btn">Trimite Mesaj</button>';
     html_form += '<div id="form-response" style="margin-top: 1rem; display: none;"></div>';
+    
     loc_form.innerHTML = html_form;
+    
+    
     const btn_submit = document.getElementById('submit-contact');
     btn_submit.addEventListener('click', function() {
+     
         const val_nume = document.getElementById('name').value;
         const val_inst = document.getElementById('institution').value;
         const val_email = document.getElementById('email').value;
         const val_subj = document.getElementById('subject').value;
         const val_msg = document.getElementById('message').value;
         const zona_rasp = document.getElementById('form-response');
-       
+        
+      
         if (!val_nume || !val_inst || !val_email || !val_subj || !val_msg) {
             zona_rasp.style.display = 'block';
             zona_rasp.style.backgroundColor = '#fee';
@@ -344,15 +348,19 @@ function creeazaFormular() {
             zona_rasp.innerHTML = '<p style="color: #c00; margin: 0;">Vă rugăm completați toate câmpurile obligatorii!</p>';
             return;
         }
+        
         zona_rasp.style.display = 'block';
         zona_rasp.style.backgroundColor = '#d1fae5';
         zona_rasp.style.padding = '1rem';
         zona_rasp.style.borderRadius = '6px';
+        
         let msg_succes = '<p style="color: #065f46; margin: 0;">';
         msg_succes += '<strong>✓ Mulțumim, ' + val_nume + '!</strong><br>';
         msg_succes += 'Mesajul dvs. a fost trimis cu succes. Vă vom contacta în curând la adresa ' + val_email + '.';
         msg_succes += '</p>';
+        
         zona_rasp.innerHTML = msg_succes;
+        
         setTimeout(function() {
             document.getElementById('name').value = '';
             document.getElementById('institution').value = '';
@@ -363,6 +371,8 @@ function creeazaFormular() {
         }, 500);
     });
 }
+
+
 document.addEventListener('DOMContentLoaded', function() {
     creazaCarduriCategorii();
     genereazaCalculatorComanda();
