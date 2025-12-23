@@ -92,7 +92,7 @@ IMPLEMENTĂRI JAVASCRIPT
       • Include 6 câmpuri și buton submit
 
 
-2. FUNCȚII DE CALCUL (Cerința 9):
+2. FUNCȚII DE CALCUL:
    
    A) Funcția Principală: calculateBulkPrice(quantity, unitPrice)
       • Parametri:
@@ -122,40 +122,3 @@ IMPLEMENTĂRI JAVASCRIPT
       • Validare input și afișare rezultate formatate
 
 
-CARACTERISTICI HTML5 & CSS
-
-Taguri Semantice HTML5 (Cerința 6):
-   • <!DOCTYPE html>
-   • <header> - antet site cu logo și navigare
-   • <nav> - meniu principal
-   • <main> - conținut principal
-   • <section> - secțiuni de conținut
-   • <article> - articole și produse
-   • <aside> - informații complementare
-   • <footer> - subsol cu date firmă
-   • <figure> și <figcaption> - imagini cu legendă
-   • <address> - informații contact
-
- CSS Extern (Cerința 7):
-   • Tot stilul în style.css
-   • Legat cu <link rel="stylesheet" href="style.css">
-   • ZERO style inline (style="...")
-   • ZERO embedded CSS (<style>...</style>)
-   • Folosește:
-     - Variabile CSS (--primary-color, etc.)
-     - Box model complet
-     - Grid și Flexbox pentru layout
-     - Tranziții și hover effects
-     - Media queries pentru responsive
-
- Logo & Meniu (Cerința 4):
-   • Logo afișat în header (imagine + text stilizat)
-   • Meniu funcțional pe toate paginile
-   • Navigare coerentă între pagini
-   • Item activ evidențiat
-
-Footer cu Date (Cerința 5):
-   • Adresa completă: Dumbrăvioara, Strada Gării nr. 200
-   • Email cu mailto: contact@anapower.ro
-   • Telefon cu tel: +40712345678
-   • Prezent pe toate paginile
