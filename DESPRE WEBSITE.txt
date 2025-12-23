@@ -1,5 +1,8 @@
+                                                                              AnaPower
+                                                                             ----------
+
 DESPRE WEBSITE
---------------
+
 Acesta este un site web pentru AnaPower, o companie specializată în furnizarea 
 de substanțe anabolice pentru cercetare științifică. Site-ul oferă informații 
 despre produse, prețuri și modalități de contact pentru cercetători autorizați 
@@ -10,13 +13,13 @@ nu pentru consum uman.
 
 
 STRUCTURA SITE-ULUI
--------------------
+
 Site-ul conține 4 pagini principale:
 
 1. HOME.HTML - Pagina Principală
    • Prezentare generală a firmei și serviciilor
    • Declarație importantă despre utilizarea exclusiv pentru cercetare
-   • Categorii principale de produse (generat dinamic)
+   • Categorii principale de produse 
    • Calculator interactiv pentru comenzi
    • Logo și meniu de navigare
 
@@ -30,35 +33,33 @@ Site-ul conține 4 pagini principale:
    • Detalii despre puritate și certificate COA
    • Secțiune control de calitate
 
-3. PRICES.HTML - Pagina Prețuri (CERINŢA TABEL)
-   • Tabel complet cu prețuri pentru diverse produse (generat dinamic prin JS)
+3. PRICES.HTML - Pagina Prețuri
+   • Tabel complet cu prețuri pentru diverse produse 
    • 15 produse diferite cu specificații complete
    • Pachete de cercetare cu reduceri
    • Calculator pentru comenzi în cantitate mare
    • Informații despre plată și livrare
 
 4. CONTACT.HTML - Pagina Contact
-   • Formular de contact complet (generat dinamic prin JS)
-   • Informații detaliate de contact (email cu mailto:, telefon cu tel:)
+   • Formular de contact complet 
+   • Informații detaliate de contact
    • Adresa completă a firmei în footer
    • Secțiune FAQ (Întrebări Frecvente)
    • Placeholder pentru hartă
 
 
 FIȘIERE PROIECT
----------------
-📄 Home.html        - Pagina principală
-📄 Products.html    - Pagina cu produse
-📄 Prices.html      - Pagina cu prețuri și tabel
-📄 Contact.html     - Pagina de contact
-🎨 style.css        - Stilizare externă (fără inline/embedded CSS)
-⚙️ script.js        - Funcționalitate JavaScript
-📁 img/             - Director pentru imagini (logo, laborator, etc.)
-📝 readme.txt       - Acest fișier
+
+ Home.html        - Pagina principală
+Products.html    - Pagina cu produse
+Prices.html      - Pagina cu prețuri și tabel
+Contact.html     - Pagina de contact
+ style.css        - Stilizare externă (fără inline/embedded CSS)
+ script.js        - Funcționalitate JavaScript
+ readme.txt       - Acest fișier
 
 
 IMPLEMENTĂRI JAVASCRIPT
------------------------
 
 1. GENERARE DINAMICĂ HTML (Cerința 8):
    
@@ -68,7 +69,7 @@ IMPLEMENTĂRI JAVASCRIPT
       • Folosește document.createElement și innerHTML
       • Afișare dinamică cu icoane și descrieri
 
-   B) Tabel Prețuri (Prices.html) ✅ CERINȚA TABEL
+   B) Tabel Prețuri (Prices.html)  CERINȚA TABEL
       • Funcția: generatePricingTable()
       • Creează dinamic un tabel complet cu 15 produse
       • Include: nume produs, unitate, puritate, preț
@@ -122,9 +123,8 @@ IMPLEMENTĂRI JAVASCRIPT
 
 
 CARACTERISTICI HTML5 & CSS
----------------------------
 
-✅ Taguri Semantice HTML5 (Cerința 6):
+Taguri Semantice HTML5 (Cerința 6):
    • <!DOCTYPE html>
    • <header> - antet site cu logo și navigare
    • <nav> - meniu principal
@@ -136,7 +136,7 @@ CARACTERISTICI HTML5 & CSS
    • <figure> și <figcaption> - imagini cu legendă
    • <address> - informații contact
 
-✅ CSS Extern (Cerința 7):
+ CSS Extern (Cerința 7):
    • Tot stilul în style.css
    • Legat cu <link rel="stylesheet" href="style.css">
    • ZERO style inline (style="...")
@@ -148,84 +148,14 @@ CARACTERISTICI HTML5 & CSS
      - Tranziții și hover effects
      - Media queries pentru responsive
 
-✅ Logo & Meniu (Cerința 4):
+ Logo & Meniu (Cerința 4):
    • Logo afișat în header (imagine + text stilizat)
    • Meniu funcțional pe toate paginile
    • Navigare coerentă între pagini
    • Item activ evidențiat
 
-✅ Footer cu Date (Cerința 5):
+Footer cu Date (Cerința 5):
    • Adresa completă: Dumbrăvioara, Strada Gării nr. 200
    • Email cu mailto: contact@anapower.ro
    • Telefon cu tel: +40712345678
    • Prezent pe toate paginile
-
-✅ Imagini & Liste (Cerința 3):
-   • Imagine laborator (laboratory.jpg)
-   • Liste neordonate (<ul>) - features, beneficii
-   • Liste ordonate (<ol>) - opțiuni livrare
-   • Liste de definiții (<dl>) - specificații produse
-
-
-CUM SĂ FOLOSEȘTI SITE-UL
--------------------------
-
-1. Deschide Home.html în browser
-2. Navighează prin meniu între pagini
-3. Pe pagina principală:
-   • Vezi categoriile generate dinamic
-   • Folosește calculatorul pentru a estima prețuri
-4. Pe pagina Products.html:
-   • Citește despre fiecare categorie de produse
-5. Pe pagina Prices.html:
-   • Consultă tabelul complet de prețuri (generat dinamic)
-   • Vezi pachetele cu reduceri
-   • Folosește calculatorul pentru comenzi mari
-6. Pe pagina Contact.html:
-   • Completează formularul (generat dinamic)
-   • Vezi informațiile de contact
-   • Citește FAQ
-
-
-CERINŢE ÎNDEPLINITE
--------------------
-✅ 1. Pagină principală (home.html) - 10p
-✅ 2. 3 pagini secundare diferite - 10p
-     • Products.html
-     • Prices.html (include tabel prețuri)
-     • Contact.html
-✅ 3. Imagini & liste - 10p
-     • Imagine laborator
-     • Liste <ul>, <ol>, <dl>
-✅ 4. Logo & meniu funcțional - 10p
-✅ 5. Footer cu date firmă - 10p
-     • Adresă + mailto + tel
-✅ 6. Taguri HTML5 semantice - 10p
-✅ 7. CSS extern, fără inline - 10p
-✅ 8. Generare HTML prin JS - 10p
-     • Tabel prețuri
-     • Carduri categorii
-     • Pachete
-     • Calculatoare
-     • Formular
-✅ 9. Funcție JS cu calcule - 10p
-     • calculateBulkPrice()
-     • Calcul reduceri pe bază de cantitate
-✅ 10. Readme.txt - 10p
-
-
-NOTE IMPORTANTE
----------------
-• Site-ul este complet funcțional și respectă toate cerințele
-• JavaScript-ul generează dinamic mai multe elemente decât minim necesar
-• Funcția de calcul este folosită în 2 locații diferite
-• Design modern, profesional și responsive
-• Toate linkurile și formularele funcționează
-• Codul este bine organizat și comentat
-
-
-CONTACT DEZVOLTATOR
--------------------
-Pentru întrebări despre acest proiect, contactați:
-Email: contact@anapower.ro
-Telefon: +40 712 345 678
